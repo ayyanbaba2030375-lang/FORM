@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form Challenge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    fieldset {
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+      color: #555;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="search"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="file"] {
+      margin-top: 5px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .inline {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>User Registration Form</h1>
+
+  <form action="#" method="post">
+    
+    <fieldset>
+      <legend>Personal Information</legend>
+      
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" required>
+
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Write something about yourself..."></textarea>
+
+      <label>Gender:</label>
+      <div class="inline">
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+      </div>
+      <div class="inline">
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+      </div>
+      <div class="inline">
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+      </div>
+
+      <label>Interests:</label>
+      <div class="inline">
+        <input type="checkbox" id="music" name="interests" value="Music">
+        <label for="music">Music</label>
+      </div>
+      <div class="inline">
+        <input type="checkbox" id="sports" name="interests" value="Sports">
+        <label for="sports">Sports</label>
+      </div>
+      <div class="inline">
+        <input type="checkbox" id="reading" name="interests" value="Reading">
+        <label for="reading">Reading</label>
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Additional Details</legend>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">-- Select Country --</option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="Australia">Australia</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <label for="colors">Preferred Colors:</label>
+      <select id="colors" name="colors" multiple size="4">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+
+      <label for="profile">Profile Picture:</label>
+      <input type="file" id="profile" name="profile" accept="image/*">
+
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="website">Website:</label>
+      <input type="url" id="website" name="website" placeholder="https://example.com">
+
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search" placeholder="Search something...">
+
+    </fieldset>
+
+    <input type="submit" value="Submit">
+
+  </form>
+
+</body>
+</html>
